@@ -73,7 +73,10 @@ print("Vertical velocities: w")
 print("Volume fraction: a")
 print("All velocities: uw")
 print("Volume fraction and all velocities: uwa")
-foo = raw_input("\nPlease enter variable(s):\n")
+try:
+	foo = raw_input("\nPlease enter variable(s):\n")
+except:
+	foo = input("\nPlease enter variable(s):\n")	
 correction4gamma = 1.0		
 if ((foo == "uw") | (foo == "wu") | (foo == "a")):
 	correction4gamma = 2.0
